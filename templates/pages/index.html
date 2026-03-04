@@ -1,16 +1,9 @@
 {% extends "base.html" %} 
+{% load static %}
 
 {% block content%}
 
-{% if name == 'mostafa ali taha youssef' %}
-
-    <p>Welcome<p>   
-    
-{% elif name == 'mostafa ali taha' %}
-
-    <p>Hello<p>
-
-{% endif %}
+{% comment %} <img src="{% static 'image/panda.jpg' %}" alt=""> {% endcomment %}
 
 {% endblock content%}
 
