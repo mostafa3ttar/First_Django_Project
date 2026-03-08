@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 from .models import Login
+from .forms import LoginForm
 # from django.http import HttpResponse
 
 # Create your views here.
@@ -16,6 +17,11 @@ def about(request):
     # return HttpResponse('About page')
     
 def login(request):    
+     
+     # dataform = LoginForm(request.POST)
+     # dataform.save()
+     
+     
      if request.method == 'POST':
           username = request.POST.get('username')
           password = request.POST.get('password')
@@ -26,5 +32,7 @@ def login(request):
                return redirect('login')
      # # print(username)
      # # print(password)
-     return render(request, 'pages/login.html')
+     
+     
+     return render(request, 'pages/login.html', {'lf': LoginForm})
     # return HttpResponse('About page')
