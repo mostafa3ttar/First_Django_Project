@@ -18,9 +18,10 @@ def about(request):
     
 def login(request):    
      
-     # dataform = LoginForm(request.POST)
-     # dataform.save()
-     
+     # if request.method == 'POST':
+     #      dataform = LoginForm(request.POST)
+     #      if dataform.is_valid():
+     #           dataform.save()
      
      if request.method == 'POST':
           username = request.POST.get('username')

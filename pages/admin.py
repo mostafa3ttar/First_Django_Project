@@ -9,3 +9,7 @@ admin.site.register(Product)
 admin.site.register(UserName)
 admin.site.register(Video)
 admin.site.register(Login)
+
+
+admin.site.site_header = 'BONNY SCENT'
+admin.site.site_title = 'BONNY SCENT'
